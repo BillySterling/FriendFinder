@@ -1,0 +1,28 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Friend Finder - Node and Express Servers Unit 13 Bootcamp homework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillySterling/FriendFinder.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Server"
+  ],
+  "author": "Billy Sterling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillySterling/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/BillySterling/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
