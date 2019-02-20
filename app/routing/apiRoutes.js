@@ -1,12 +1,19 @@
+// accept new friend input.  Add to friend array.  
+// you will already have friends data in arrays saved from previous inputs
+// first get new friends total score (do we really need this???)
+// Loop thru saved friends and see which has the least difference. 
+// the loop withing this loop will be getting score totals of all old friends
+
 //required for friends data source
-var oldFriends = require('../data/friends.js');
+var oldFriends = require('../data/friends');
+//var oldFriends = require('../app/data/friends');
 
 // Routes and export
 module.exports = function(app){
 
 	// Get route to display a JSON of all possible friends
 	app.get('/api/friends', function(req, res){
-		res.json(friends);
+		res.json(oldFriends);
     });
 
     app.post('/api/friends', function(req, res){
@@ -30,7 +37,6 @@ module.exports = function(app){
             var oldFriendsTotal = 0;
             console.log("Old Friends: ", oldFriends[r].name);
             for (var k = 0; k < oldFriends[r].scores.length; k++) {
-                //oldFriendsTotal += parseInt(oldFriends[r].scores[k]); 
                 oldFriendsTotal += Math.abs(parseInt(newFriendScores[r]) - parseInt(oldFriends[r].scores[k]));
                 if (oldFriendsTotal <= matchedFriend.matchDiff) {
                     matchedFriend.name = oldFriends[r].name;
@@ -42,14 +48,12 @@ module.exports = function(app){
         };
         console.log("matchedFriend: " + matchedFriend.name);  
 
+        oldFriends.push(newFriend);
+        res.json(matchedFriend);
+        console.log("UPDATED: " + newFriend);
     });
 
 };
 
-// accept new friend input.  Add to friend array.  
-// you will already have friends data in arrays saved from previous inputs
-// first get new friends total score (do we really need this???)
-// Loop thru saved friends and see which has the least difference. 
-// the loop withing this loop will be getting score totals of all old friends
 
 
