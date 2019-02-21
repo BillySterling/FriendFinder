@@ -16,13 +16,13 @@ module.exports = function(app){
     });
 
     app.post('/api/friends', function(req, res){
-        console.log(req.body);
+//        console.log(req.body);
         debugger;
         var matchedFriend = {
             name: "",
             photo: "",
             matchDiff: 0
-        }
+        };
         var newFriend = req.body;
         var newFriendScores = req.body.scores;
         //console.log("NewFriend scores from survey: " + newFriendScores);
@@ -31,7 +31,7 @@ module.exports = function(app){
         //var newFriendTotal = 0;
         //for (var i = 0; i < newFriend.scores.length; i++) {
         //        newFriendTotal += parseInt(newFriend.scores[i]);  
-            }
+        //    }
         //console.log("NewFriend total score from survey: " + newFriendTotal);
 
         for (var r = 0; r < oldFriends.length; r++) {
@@ -47,12 +47,12 @@ module.exports = function(app){
                   }
             }
             console.log("oldFriend total: " + oldFriendsTotal);
-        };
+        }
         console.log("matched Friend: " + matchedFriend.name);  
 
+        // push (save) the new friends data
         oldFriends.push(newFriend);
         res.json(matchedFriend);
         console.log("UPDATED: ", newFriend);
     });
-
 };
