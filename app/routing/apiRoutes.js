@@ -18,6 +18,7 @@ module.exports = function(app){
 
     app.post('/api/friends', function(req, res){
         console.log(req.body);
+        debugger;
         var matchedFriend = {
             name: "",
             photo: "",
@@ -50,7 +51,7 @@ module.exports = function(app){
 
         oldFriends.push(newFriend);
         res.json(matchedFriend);
-        console.log("UPDATED: " + newFriend);
+        console.log("UPDATED: ", newFriend);
     });
 
 };
