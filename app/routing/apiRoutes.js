@@ -21,7 +21,7 @@ module.exports = function(app){
         var matchedFriend = {
             name: "",
             photo: "",
-            matchDiff: 0
+            matchDiff: 40
         };
         var newFriend = req.body;
         var newFriendScores = req.body.scores;
@@ -49,7 +49,7 @@ module.exports = function(app){
             console.log("oldFriend total: " + oldFriendsTotal);
         }
         console.log("matched Friend: " + matchedFriend.name);  
-
+        debugger;
         // push (save) the new friends data
         oldFriends.push(newFriend);
         res.json(matchedFriend);
