@@ -1,8 +1,8 @@
 var oldFriends = 
 [
-  { name: 'Captain Kangaroo',
+  { name: 'Incredible Hulk',
     photo:
-     'https://en.wikipedia.org/wiki/Captain_Kangaroo#/media/File:Bob_Keeshan_Captain_Kangaroo_1970.JPG',
+     'https://cdn.pixabay.com/photo/2016/10/02/23/51/incredible-hulk-1710710__340.jpg',
     scores: [ '5', '3', '4', '2', '3', '2', '4', '2', '1', '3' ] },
   { name: 'Deadpool',
     photo:
@@ -14,7 +14,7 @@ var oldFriends =
     scores: [ '1', '1', '5', '1', '5', '4', '2', '4', '2', '5' ] },
   { name: 'Iron Man',
     photo:
-     'https://en.wikipedia.org/wiki/Iron_Man#/media/File:Iron_Man_bleeding_edge.jpg',
+     'https://cdn.pixabay.com/photo/2018/08/15/19/53/iron-man-3608968__340.png',
     scores: [ '5', '4', '3', '2', '5', '1', '4', '1', '3', '3' ] },
   { name: 'Green Lantern',
     photo:

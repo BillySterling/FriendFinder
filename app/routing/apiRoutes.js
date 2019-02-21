@@ -6,7 +6,6 @@
 
 //required for friends data source
 var oldFriends = require('../data/friends');
-//var oldFriends = require('../app/data/friends');
 
 // Routes and export
 module.exports = function(app){
@@ -24,22 +23,23 @@ module.exports = function(app){
             photo: "",
             matchDiff: 0
         }
-        var newFriend = req.body;
-        var newFriendScores = req.body.scores;
+        // var newFriend = req.body;
+        // var newFriendScores = req.body.scores;
         //console.log("NewFriend scores from survey: " + newFriendScores);
 
         var newFriendTotal = 0;
         for (var i = 0; i < newFriend.scores.length; i++) {
                 newFriendTotal += parseInt(newFriend.scores[i]);  
             }
-        console.log("NewFriend total score from survey: " + newFriendTotal);
+        //console.log("NewFriend total score from survey: " + newFriendTotal);
 
         for (var r = 0; r < oldFriends.length; r++) {
             var oldFriendsTotal = 0;
-            console.log("Old Friends: ", oldFriends[r].name);
+            //console.log("Old Friends: ", oldFriends[r].name);
             for (var k = 0; k < oldFriends[r].scores.length; k++) {
                 oldFriendsTotal += Math.abs(parseInt(newFriendScores[r]) - parseInt(oldFriends[r].scores[k]));
                 if (oldFriendsTotal <= matchedFriend.matchDiff) {
+                    debugger;
                     matchedFriend.name = oldFriends[r].name;
                     matchedFriend.photo = oldFriends[r].photo;
                     matchedFriend.matchDiff = oldFriendsTotal;
@@ -55,6 +55,3 @@ module.exports = function(app){
     });
 
 };
-
-
-
