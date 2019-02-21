@@ -23,6 +23,7 @@ module.exports = function(app){
             photo: "",
             matchDiff: 0
         }
+        // below code for debugging
         // var newFriend = req.body;
         // var newFriendScores = req.body.scores;
         //console.log("NewFriend scores from survey: " + newFriendScores);
@@ -47,7 +48,7 @@ module.exports = function(app){
             }
             console.log("oldFriend total: " + oldFriendsTotal);
         };
-        console.log("matchedFriend: " + matchedFriend.name);  
+        console.log("matched Friend: " + matchedFriend.name);  
 
         oldFriends.push(newFriend);
         res.json(matchedFriend);

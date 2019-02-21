@@ -14,6 +14,7 @@ var express = require("express");
 var app = express();
 
 // Sets an initial port. We"ll use this later in our listener
+// process.env.PORT is necessary for Heroku application
 var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
@@ -37,5 +38,5 @@ require("./app/routing/htmlRoutes")(app);
 // =============================================================================
 
 app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+  console.log("FriendFinder App listening on PORT: " + PORT);
 });
