@@ -23,14 +23,14 @@ module.exports = function(app){
             photo: "",
             matchDiff: 0
         }
-        // below code for debugging
-        // var newFriend = req.body;
-        // var newFriendScores = req.body.scores;
+        var newFriend = req.body;
+        var newFriendScores = req.body.scores;
         //console.log("NewFriend scores from survey: " + newFriendScores);
 
-        var newFriendTotal = 0;
-        for (var i = 0; i < newFriend.scores.length; i++) {
-                newFriendTotal += parseInt(newFriend.scores[i]);  
+        // debugging code
+        //var newFriendTotal = 0;
+        //for (var i = 0; i < newFriend.scores.length; i++) {
+        //        newFriendTotal += parseInt(newFriend.scores[i]);  
             }
         //console.log("NewFriend total score from survey: " + newFriendTotal);
 
