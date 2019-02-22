@@ -29,7 +29,6 @@ module.exports = function(app){
 
                 //The closest match will be the user with the least amount of difference.
                 if (bestScore < matchDiff) {
-                    debugger;
                     matchedFriend.name = oldFriends[r].name;
                     matchedFriend.photo = oldFriends[r].photo;
                     matchDiff = bestScore;
