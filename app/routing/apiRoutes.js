@@ -14,18 +14,18 @@ module.exports = function(app){
             name: "",
             photo: "",
         };
+        // pre-load diff value greater than zero for first comparison
         var matchDiff = 1000;
         for (var r = 0; r < oldFriends.length; r++) {
             // array to keep score calculations between input friend data and stored friend data
             var matchArr = [];
             // loop thru the scores; compare the difference between current user's scores against those from other users, question by question.
             for (var k = 0; k < oldFriends[r].scores.length; k++) {
-                debugger;
                 // Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on.
                 matchArr.push(Math.abs((oldFriends[r].scores[k]) - (req.body.scores[k])));
                 }
-                debugger;
-                var bestScore = matchArr.reduce((acc, val) => acc + val);
+                // use reduce function to add up the array amounts
+                const bestScore = matchArr.reduce((acc, val) => acc + val);
 
                 //The closest match will be the user with the least amount of difference.
                 if (bestScore < matchDiff) {
@@ -36,7 +36,6 @@ module.exports = function(app){
                     }
             }
             console.log("matched Friend: " + matchedFriend.name);  
-            debugger;
             // save the new friends data
             console.log("UPDATED: ", req.body);
             oldFriends.push(req.body);
