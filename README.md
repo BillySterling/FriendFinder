@@ -27,7 +27,7 @@ In order to run this application locally you will need to install the following 
 ![Survey Page Image 1](FriendFinder-1.png)
 ![Survey Page Image 2](FriendFinder-2.png)
 
-   * Go to the application on Heroku
+   * Go to the application on [Heroku](https://limitless-wildwood-91948.herokuapp.com/)
    * Click blue "Go to Survey" button
    * Fill out and submit the survey.  Once submitted your most compatible friend will be displayed.
    * Click "API Friends List" link to see JSON of saved friends.
