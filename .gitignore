@@ -2,5 +2,7 @@ node_modules
 .DS_Store
 .env
 .vscode
+.eslintre.json
+.eslintrc.json
 debug.log
 *.txt
