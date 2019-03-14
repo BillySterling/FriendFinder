@@ -24,5 +24,8 @@
   "homepage": "https://github.com/BillySterling/FriendFinder#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1"
   }
 }

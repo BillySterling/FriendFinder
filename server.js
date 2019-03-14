@@ -38,5 +38,6 @@ require("./app/routing/htmlRoutes")(app);
 // =============================================================================
 
 app.listen(PORT, function() {
+  // eslint-disable-next-line no-console
   console.log("FriendFinder App listening on PORT: " + PORT);
 });
