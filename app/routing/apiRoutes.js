@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 //required for friends data source
 var oldFriends = require('../data/friends');
 
